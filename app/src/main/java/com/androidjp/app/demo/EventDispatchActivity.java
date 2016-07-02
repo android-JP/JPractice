@@ -62,6 +62,11 @@ public class EventDispatchActivity extends Activity {
         initEvent();
     }
 
+    /**
+     * 重要：
+     * ①将每个View和这个View要做的事情绑定在一块
+     * ②将View的事件执行顺序串连起来
+     */
     private void initEvent() {
         event = new CloseEventStub(null,null);
         event = new AnimationLeftEventStub(event,view5);
@@ -79,6 +84,9 @@ public class EventDispatchActivity extends Activity {
     }
 
 
+    /**
+     * 定义入口事件
+     */
     public void dispatch(View v){
         event.onEvent(view1);
     }

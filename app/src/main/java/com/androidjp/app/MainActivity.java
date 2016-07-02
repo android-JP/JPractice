@@ -6,17 +6,23 @@ import android.view.View;
 import android.widget.Button;
 
 import com.androidjp.app.demo.EventDispatchActivity;
+import com.androidjp.lib_custom_view.titlebar.ImmerseTitleBar;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
+    private ImmerseTitleBar mTitleBar;
     private Button mBtnEventDispatch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
 
-        initView();
+        mTitleBar = (ImmerseTitleBar) findViewById(R.id.titlebar);
+
+        mTitleBar.showView(ImmerseTitleBar.TitleBarItem.ICON_LEFT).showView(ImmerseTitleBar.TitleBarItem.TITLE).showView(ImmerseTitleBar.TitleBarItem.BTN_RIGHT);
+
+//        initView();
     }
 
     private void initView() {

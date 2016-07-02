@@ -1,1 +1,1 @@
-include ':crosswalk-demo'
+include ':lib-event-link', ':app', ':lib-four-components', ':lib-common-util', ':lib-custom-view'
