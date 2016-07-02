@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="circle_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LinkTextView">
+        <attr name="anim" format="boolean"/>
+    </declare-styleable>
+
+
+    <!--自定义沉浸式TitleBar-->
+    <declare-styleable name="ImmerseTitleBar">
+        <!--Title部分-->
+        <attr name="titleText" format="string"/>
+        <attr name="titleColor" format="color"/>
+        <attr name="titleSize" format="dimension"/>
+
+        <!--左边部分-->
+        <attr name="leftBtnText" format="string"/><!--左侧按钮文本-->
+        <attr name="leftBtnBg" format="reference|color"/><!--左侧按钮背景-->
+        <attr name="leftBtnTextColor" format="color"/><!--左侧按钮文件颜色-->
+        <attr name="leftBtnTextSize" format="dimension"/><!--左侧按钮文字大小-->
+        <attr name="leftIcon" format="reference"/><!--左侧图标-->
+        <attr name="leftView" format="reference"/><!---->
+        <attr name="leftIconBg" format="reference|color"/><!--左侧-->
+        <attr name="leftLayout" format="reference"/><!--左侧自定义布局-->
+
+        <!--右边部分-->
+        <attr name="rightBtnText" format="string"/>
+        <attr name="rightBtnBg" format="reference|color"/>
+        <attr name="rightBtnTextColor" format="color"/>
+        <attr name="rightBtnTextSize" format="dimension"/>
+        <attr name="rightIcon" format="reference"/>
+        <attr name="rightView" format="reference"/>
+        <attr name="rightIconBg" format="reference|color"/>
+        <attr name="rightLayout" format="reference"/>
+
+    </declare-styleable>
+</resources>
