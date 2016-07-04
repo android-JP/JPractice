@@ -12,9 +12,9 @@ import android.widget.Toast;
  * 功能：实现生命周期的基本log和toast输出
  * Created by androidjp on 16-7-1.
  */
-public abstract class BaseService extends Service{
+public abstract class LogService extends Service{
 
-    abstract String getTag();
+    protected abstract String getTag();
 
 
     @Override
