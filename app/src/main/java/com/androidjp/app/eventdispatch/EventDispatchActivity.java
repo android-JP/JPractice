@@ -1,4 +1,4 @@
-package com.androidjp.app.demo;
+package com.androidjp.app.eventdispatch;
 
 import android.app.Activity;
 import android.content.Context;

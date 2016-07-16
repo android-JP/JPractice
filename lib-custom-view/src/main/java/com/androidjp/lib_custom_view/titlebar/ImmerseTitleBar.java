@@ -94,6 +94,10 @@ public class ImmerseTitleBar extends LinearLayout{
         /*TODO:设置组件的属性*/
         initView(context, array);
         initEvent();
+
+        if (context instanceof Activity){
+            ImmerseAdapter.setImmerseStyle((Activity)context);
+        }
     }
 
     private void initView(Context context,TypedArray array) {
@@ -598,4 +602,51 @@ public class ImmerseTitleBar extends LinearLayout{
         return this;
     }
 
+    public void setLeftBtnListener(LeftBtnListener leftBtnListener) {
+        this.leftBtnListener = leftBtnListener;
+    }
+
+    public void setLeftIconListener(LeftIconListener leftIconListener) {
+        this.leftIconListener = leftIconListener;
+    }
+
+    public void setLeftViewListener(LeftViewListener leftViewListener) {
+        this.leftViewListener = leftViewListener;
+    }
+
+    public void setRightBtnListener(RightBtnListener rightBtnListener) {
+        this.rightBtnListener = rightBtnListener;
+    }
+
+    public void setRightIconListener(RightIconListener rightIconListener) {
+        this.rightIconListener = rightIconListener;
+    }
+
+    public void setRightViewListener(RightViewListener rightViewListener) {
+        this.rightViewListener = rightViewListener;
+    }
+
+    public void setLeftBtnLongListener(LeftBtnLongListener leftBtnLongListener) {
+        this.leftBtnLongListener = leftBtnLongListener;
+    }
+
+    public void setLeftIconLongListener(LeftIconLongListener leftIconLongListener) {
+        this.leftIconLongListener = leftIconLongListener;
+    }
+
+    public void setLeftViewLongListener(LeftViewLongListener leftViewLongListener) {
+        this.leftViewLongListener = leftViewLongListener;
+    }
+
+    public void setRightBtnLongListener(RightBtnLongListener rightBtnLongListener) {
+        this.rightBtnLongListener = rightBtnLongListener;
+    }
+
+    public void setRightIconLongListener(RightIconLongListener rightIconLongListener) {
+        this.rightIconLongListener = rightIconLongListener;
+    }
+
+    public void setRightViewLongListener(RightViewLongListener rightViewLongListener) {
+        this.rightViewLongListener = rightViewLongListener;
+    }
 }

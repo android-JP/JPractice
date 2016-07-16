@@ -3,7 +3,6 @@ package com.androidjp.lib_common_util.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.junpeng.jpserver.MyAppl;
 
 /**
  * Created by JP on 2016/3/24.
@@ -28,7 +27,7 @@ public class SharedPrefUtil {
 
     public static SharedPreferences getInstance() {
         if (sharedPrefs == null) {
-            sharedPrefs = MyAppl.getInstance().getApplicationContext().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+//            sharedPrefs = MyAppl.getInstance().getApplicationContext().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         }
         return sharedPrefs;
     }

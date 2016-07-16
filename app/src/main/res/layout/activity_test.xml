@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        app:leftBtnText="用户"
+        app:leftBtnText="测试隐式跳转"
         app:leftBtnTextColor="@color/white"
         app:rightBtnText="扫一扫"
         app:rightBtnTextColor="@color/white"

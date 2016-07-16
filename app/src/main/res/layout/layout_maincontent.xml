@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_eventdispatch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="事件分发顺序自定义"
-        />
 
-</LinearLayout>
+
+        <Button
+            android:id="@+id/btn_eventdispatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="事件分发顺序自定义"
+            />
+
+
+        <Button
+            android:id="@+id/btn_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView + ViewPager"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试Activity Theme"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

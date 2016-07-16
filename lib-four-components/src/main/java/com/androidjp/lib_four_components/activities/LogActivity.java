@@ -12,16 +12,19 @@ import android.widget.Toast;
  *
  * Created by androidjp on 16-7-1.
  */
-public abstract class LogActivity extends Activity{
+public abstract class LogActivity extends BaseActivity{
 
+    ///控制是否输出Toast
+    private static final boolean IS_TOAST = false;
     ///控制是否输出Log
     private static final boolean IS_LOG = true;
+
 
     /**
      *
      * @return TAG
      */
-    abstract String getTag();
+    protected abstract String getTag();
 
     //-------------------------------------------------------
     //正常生命周期方法
@@ -91,9 +94,6 @@ public abstract class LogActivity extends Activity{
             case KeyEvent.KEYCODE_HOME:
                 onLog("click to home");
                 break;
-            default:
-                onLog("nothing");
-                break;
         }
 
         return super.onKeyDown(keyCode, event);
@@ -139,8 +139,10 @@ public abstract class LogActivity extends Activity{
     //-------------------------------------------
     public  void onLog(String logMsg){
         if (IS_LOG){
-            Toast.makeText(this, getTag()+": "+logMsg, Toast.LENGTH_SHORT).show();
             Log.i(getTag(),logMsg);
+        }
+        if (IS_TOAST){
+            Toast.makeText(this, getTag()+": "+logMsg, Toast.LENGTH_SHORT).show();
         }
     }
 }

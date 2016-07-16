@@ -8,11 +8,17 @@ import android.util.Log;
 import android.widget.Toast;
 
 /**
- * 基类Service
+ * 生命周期Service
  * 功能：实现生命周期的基本log和toast输出
  * Created by androidjp on 16-7-1.
  */
 public abstract class LogService extends Service{
+
+    ///控制是否输出Toast
+    private static final boolean IS_TOAST = false;
+    ///控制是否输出Log
+    private static final boolean IS_LOG = true;
+
 
     protected abstract String getTag();
 
@@ -20,16 +26,16 @@ public abstract class LogService extends Service{
     @Override
     public IBinder onBind(Intent intent) {
         String msg = String.format(">>服务%s:onBind,intent=%s", getTag(), intent);
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Log.e(getTag(), msg);
+        onLog(msg);
+
         return null;
     }
 
     @Override
     public boolean onUnbind(Intent intent) {
         String msg = String.format(">>服务%s:onUnbind,intent=%s", getTag(), intent);
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Log.e(getTag(), msg);
+        onLog(msg);
+
         return super.onUnbind(intent);
     }
 
@@ -37,40 +43,46 @@ public abstract class LogService extends Service{
     public void onCreate() {
         super.onCreate();
         String msg = String.format(">>服务%s:onCreate", getTag());
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Log.e(getTag(), msg);
+        onLog(msg);
+
     }
 
     @Override
     public void onStart(Intent intent, int startId) {
         super.onStart(intent, startId);
         String msg = String.format(">>服务%s:onStart,intent=%s,startId=%s", getTag(), intent, startId);
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Log.e(getTag(), msg);
+        onLog(msg);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         String msg = String.format(">>服务%s:onStartCommand,intent=%s,flags=%s,startId=%s", getTag(), intent, flags, startId);
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Log.e(getTag(), msg);
+        onLog(msg);
+
         return super.onStartCommand(intent, flags, startId);
     }
 
     @Override
     public void onDestroy() {
         String msg = String.format(">>服务%s:onDestroy", getTag());
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Log.e(getTag(), msg);
+        onLog(msg);
         super.onDestroy();
     }
 
     @Override
     public void onRebind(Intent intent) {
         String msg = String.format(">>服务%s:onRebind,intent=%s", getTag(), intent);
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Log.e(getTag(), msg);
+        onLog(msg);
         super.onRebind(intent);
+    }
+
+    private void onLog(String msg){
+        if (IS_LOG){
+            Log.e(getTag(), msg);
+        }
+        if (IS_TOAST){
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
