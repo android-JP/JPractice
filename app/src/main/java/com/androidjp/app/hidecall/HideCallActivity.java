@@ -13,13 +13,13 @@ import com.androidjp.lib_four_components.activities.LogActivity;
  * 测试BaseActivity
  * Created by androidjp on 16-7-4.
  */
-public class SecondActivity extends LogActivity{
+public class HideCallActivity extends LogActivity{
 
 
 
     @Override
     protected String getTag() {
-        return SecondActivity.class.getSimpleName();
+        return HideCallActivity.class.getSimpleName();
     }
 
     @Override
@@ -29,10 +29,10 @@ public class SecondActivity extends LogActivity{
         setContentView(R.layout.activity_second);
 
         this.setCanceledCallback(() -> {
-            Toast.makeText(SecondActivity.this,"He canceled!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HideCallActivity.this,"He canceled!", Toast.LENGTH_SHORT).show();
         });
         this.setOkCallback(() -> {
-            Toast.makeText(SecondActivity.this,"He OK!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HideCallActivity.this,"He OK!", Toast.LENGTH_SHORT).show();
         });
     }
 

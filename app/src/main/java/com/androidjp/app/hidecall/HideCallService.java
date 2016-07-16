@@ -1,4 +1,4 @@
-package com.androidjp.app.services;
+package com.androidjp.app.hidecall;
 
 import com.androidjp.lib_four_components.services.LogService;
 
@@ -6,7 +6,7 @@ import com.androidjp.lib_four_components.services.LogService;
  * 测试隐式调用
  * Created by androidjp on 16-7-4.
  */
-public class TestService extends LogService {
+public class HideCallService extends LogService {
 
 
     @Override

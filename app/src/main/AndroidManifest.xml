@@ -18,7 +18,7 @@
         <activity android:name=".eventdispatch.EventDispatchActivity"
             android:launchMode="singleTask" />
 
-        <activity android:name=".hidecall.SecondActivity">
+        <activity android:name=".hidecall.HideCallActivity">
 
             <intent-filter>
                 <action android:name="com.androidjp.app.ACTION_TEST"/>
@@ -28,7 +28,7 @@
         </activity>
 
 
-        <service android:name=".services.TestService">
+        <service android:name=".hidecall.HideCallService">
             <intent-filter>
                 <action android:name="com.androidjp.app.ACTION_TEST"/>
                 <!--<category android:name="android.intent.category.DEFAULT"/>-->
