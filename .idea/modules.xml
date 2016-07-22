@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/JPractice.iml" filepath="$PROJECT_DIR$/JPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-binder-aidl/lib-binder-aidl.iml" filepath="$PROJECT_DIR$/lib-binder-aidl/lib-binder-aidl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-common-db/lib-common-db.iml" filepath="$PROJECT_DIR$/lib-common-db/lib-common-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-common-util/lib-common-util.iml" filepath="$PROJECT_DIR$/lib-common-util/lib-common-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-custom-view/lib-custom-view.iml" filepath="$PROJECT_DIR$/lib-custom-view/lib-custom-view.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-event-link/lib-event-link.iml" filepath="$PROJECT_DIR$/lib-event-link/lib-event-link.iml" />

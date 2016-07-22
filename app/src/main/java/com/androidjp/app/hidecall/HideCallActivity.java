@@ -16,12 +16,6 @@ import com.androidjp.lib_four_components.activities.LogActivity;
 public class HideCallActivity extends LogActivity{
 
 
-
-    @Override
-    protected String getTag() {
-        return HideCallActivity.class.getSimpleName();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +33,6 @@ public class HideCallActivity extends LogActivity{
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(MainActivity.ACTION_TEST);
-        this.stopService(intent);
-
         setResult(RESULT_CANCELED);
     }
 }

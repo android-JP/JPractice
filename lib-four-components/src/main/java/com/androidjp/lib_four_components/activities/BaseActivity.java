@@ -3,6 +3,7 @@ package com.androidjp.lib_four_components.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * 封装了基本的Activity间Intent的传递

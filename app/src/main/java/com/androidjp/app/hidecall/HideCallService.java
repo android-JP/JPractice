@@ -1,16 +1,20 @@
 package com.androidjp.app.hidecall;
 
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import android.support.annotation.Nullable;
+
 import com.androidjp.lib_four_components.services.LogService;
 
 /**
  * 测试隐式调用
  * Created by androidjp on 16-7-4.
  */
-public class HideCallService extends LogService {
-
-
+public class HideCallService extends Service {
+    @Nullable
     @Override
-    public  String getTag() {
+    public IBinder onBind(Intent intent) {
         return null;
     }
 

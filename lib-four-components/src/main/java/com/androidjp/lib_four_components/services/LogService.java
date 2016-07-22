@@ -12,7 +12,7 @@ import android.widget.Toast;
  * 功能：实现生命周期的基本log和toast输出
  * Created by androidjp on 16-7-1.
  */
-public abstract class LogService extends Service{
+public class LogService extends Service{
 
     ///控制是否输出Toast
     private static final boolean IS_TOAST = false;
@@ -20,7 +20,9 @@ public abstract class LogService extends Service{
     private static final boolean IS_LOG = true;
 
 
-    protected abstract String getTag();
+    private String getTag(){
+        return this.getClass().getName();
+    }
 
 
     @Override

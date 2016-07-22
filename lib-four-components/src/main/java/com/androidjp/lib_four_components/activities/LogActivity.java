@@ -20,11 +20,9 @@ public abstract class LogActivity extends BaseActivity{
     private static final boolean IS_LOG = true;
 
 
-    /**
-     *
-     * @return TAG
-     */
-    protected abstract String getTag();
+    private String getTag(){
+        return this.getClass().getName();
+    }
 
     //-------------------------------------------------------
     //正常生命周期方法

@@ -1,7 +1,6 @@
 package com.androidjp.lib_custom_view.titlebar;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Build;
 import android.view.Window;
 import android.view.WindowManager;

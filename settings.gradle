@@ -1,1 +1,1 @@
-include ':lib-event-link', ':app', ':lib-four-components', ':lib-common-util', ':lib-custom-view', ':lib-binder-aidl'
+include ':lib-event-link', ':app', ':lib-four-components', ':lib-common-util', ':lib-custom-view', ':lib-binder-aidl', ':lib-common-db'

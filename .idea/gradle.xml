@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib-binder-aidl" />
+            <option value="$PROJECT_DIR$/lib-common-db" />
             <option value="$PROJECT_DIR$/lib-common-util" />
             <option value="$PROJECT_DIR$/lib-custom-view" />
             <option value="$PROJECT_DIR$/lib-event-link" />
@@ -22,6 +23,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib-binder-aidl" />
+            <option value="$PROJECT_DIR$/lib-common-db" />
             <option value="$PROJECT_DIR$/lib-common-util" />
             <option value="$PROJECT_DIR$/lib-custom-view" />
             <option value="$PROJECT_DIR$/lib-event-link" />

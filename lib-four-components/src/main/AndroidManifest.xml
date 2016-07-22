@@ -4,9 +4,12 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        >
 
-        <activity android:name=".activities.CommonTabActivity"/>
+        <activity android:name=".activities.CommonTabActivity"
+            android:theme="@style/Theme.AppCompat"
+            />
 
     </application>
 
