@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.androidjp.lib_custom_view.titlebar.ImmerseTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:leftBtnText="测试隐式跳转"
+        app:leftBtnTextColor="@color/white"
+        app:rightBtnText="扫一扫"
+        app:rightBtnTextColor="@color/white"
+        app:titleColor="@color/white"
+        app:titleText="首页"
+        tools:layout_width="match_parent"
+        tools:layout_height="52dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/layout_frame_main"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+    </FrameLayout>
+
+</LinearLayout>

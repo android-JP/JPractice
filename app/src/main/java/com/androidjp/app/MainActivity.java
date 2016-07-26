@@ -17,18 +17,16 @@ import android.widget.Toast;
 import com.androidjp.app.actionbar.MyActionbarActivity;
 import com.androidjp.app.eventdispatch.EventDispatchActivity;
 import com.androidjp.app.fileio.FileIoActivity;
+import com.androidjp.app.fragment.FragActivity;
 import com.androidjp.app.menutest.MyMenuActivity;
+import com.androidjp.app.recyclerview.CommonTabActivity;
 import com.androidjp.app.service.MyBroadcastService;
 import com.androidjp.lib_custom_view.titlebar.ImmerseTitleBar;
-import com.androidjp.lib_four_components.activities.CommonTabActivity;
-import com.androidjp.lib_four_components.activities.LogActivity;
-import com.androidjp.lib_four_components.fragments.adapters.RecListAdapter;
+import com.androidjp.lib_four_components.activities.ImmersionActivity;
 
 import java.util.List;
 
-public class MainActivity extends LogActivity implements View.OnClickListener{
-
-    private ImmerseTitleBar mTitleBar;
+public class MainActivity extends ImmersionActivity implements View.OnClickListener{
 
     public static final String ACTION_TEST = "com.androidjp.app.ACTION_TEST";
 
@@ -43,11 +41,8 @@ public class MainActivity extends LogActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_test);
 
-        setContentView(R.layout.activity_main);
-
-        mTitleBar = (ImmerseTitleBar) findViewById(R.id.titlebar);
-        mTitleBar.showView(ImmerseTitleBar.TitleBarItem.BTN_LEFT).showView(ImmerseTitleBar.TitleBarItem.TITLE).showView(ImmerseTitleBar.TitleBarItem.BTN_RIGHT);
-        mTitleBar.setLeftBtnListener(() -> {
+        ((ImmerseTitleBar)getTitleBar()).showView(ImmerseTitleBar.TitleBarItem.BTN_LEFT).showView(ImmerseTitleBar.TitleBarItem.TITLE).showView(ImmerseTitleBar.TitleBarItem.BTN_RIGHT);
+        ((ImmerseTitleBar)getTitleBar()).setLeftBtnListener(() -> {
             hideCallIntent = new Intent();
             hideCallIntent.setAction("com.androidjp.app.ACTION_TEST");
 
@@ -65,6 +60,11 @@ public class MainActivity extends LogActivity implements View.OnClickListener{
             Toast.makeText(this,"He OK!", Toast.LENGTH_SHORT).show();
         });
 
+    }
+
+    @Override
+    protected int setRootLayout() {
+        return R.layout.layout_maincontent;
     }
 
     private void initView() {
@@ -123,6 +123,13 @@ public class MainActivity extends LogActivity implements View.OnClickListener{
         btn7.setPadding(10,10,10,10);
         btn7.setOnClickListener(this);
 
+        Button btn8 = new Button(this);
+        btn8.setTag(1008);
+        btn8.setText("测试Fragment的addToBackStack()");
+        btn8.setLayoutParams(layoutParams);
+        btn8.setPadding(10,10,10,10);
+        btn8.setOnClickListener(this);
+
 
         mainLayout.addView(btn1);
         mainLayout.addView(btn2);
@@ -131,6 +138,7 @@ public class MainActivity extends LogActivity implements View.OnClickListener{
         mainLayout.addView(btn5);
         mainLayout.addView(btn6);
         mainLayout.addView(btn7);
+        mainLayout.addView(btn8);
 
     }
 
@@ -142,7 +150,7 @@ public class MainActivity extends LogActivity implements View.OnClickListener{
                 startActivity(EventDispatchActivity.actionView(this, null));
                 break;
             case 1002:
-                startActivity(CommonTabActivity.actionView(this, RecListAdapter.ALMOST_TYPE.SHOUYE.ordinal()));
+                startActivity(new Intent(this, CommonTabActivity.class));
                 break;
             case 1003:
                 startActivity(new Intent(this, MyActionbarActivity.class));
@@ -184,6 +192,10 @@ public class MainActivity extends LogActivity implements View.OnClickListener{
 
             case 1007:
                 startActivity(new Intent(this, FileIoActivity.class));
+                break;
+
+            case 1008:
+                startActivity(new Intent(this, FragActivity.class));
                 break;
         }
     }

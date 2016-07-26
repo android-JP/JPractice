@@ -12,7 +12,7 @@ import android.widget.Toast;
  *
  * Created by androidjp on 16-7-1.
  */
-public abstract class LogActivity extends BaseActivity{
+public class LogActivity extends BaseActivity{
 
     ///控制是否输出Toast
     private static final boolean IS_TOAST = false;

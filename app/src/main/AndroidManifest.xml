@@ -12,6 +12,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,11 +27,8 @@
             </intent-filter>
         </activity>
 
-
-        <!--文件IO相关-->
-        <activity android:name=".fileio.FileIoActivity"/>
-
-
+        <!-- 文件IO相关 -->
+        <activity android:name=".fileio.FileIoActivity" />
 
         <!-- ActionBar和Theme主题相关的Activity -->
         <activity android:name=".actionbar.MyActionbarActivity" />
@@ -40,25 +38,28 @@
         <activity
             android:name=".themetest.DarkActivity"
             android:theme="@style/Theme.AppCompat" />
-
         <activity
             android:name=".menutest.MyMenuActivity"
             android:theme="@style/Theme.AppCompat.Light" />
-
-
+        <activity android:name=".recyclerview.CommonTabActivity" />
 
         <!-- service相关 -->
-
 
         <service android:name=".hidecall.HideCallService">
             <intent-filter>
                 <action android:name="com.androidjp.app.ACTION_TEST" />
-                 <category android:name="android.intent.category.DEFAULT"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
+        <service android:name=".service.MyBroadcastService" />
 
-        <service android:name=".service.MyBroadcastService"/>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <activity android:name=".fragment.FragActivity"/>
     </application>
 
 </manifest>

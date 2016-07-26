@@ -2,6 +2,14 @@ package com.androidjp.lib_four_components.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.FrameLayout;
+
+import com.androidjp.lib_custom_view.titlebar.ImmerseTitleBar;
+import com.androidjp.lib_four_components.R;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  *
@@ -18,12 +26,38 @@ import android.os.Bundle;
  *
  * Created by androidjp on 16-7-1.
  */
-public class ImmersionActivity extends Activity {
+public abstract class ImmersionActivity extends LogActivity implements ImmersionListener{
+
+    FrameLayout container;
+    View rootLayout;
+    ImmerseTitleBar titleBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.container_immersion);
+        container = (FrameLayout) findViewById(R.id.layout_frame_main);
+        titleBar = (ImmerseTitleBar) findViewById(R.id.titlebar);
+        rootLayout = getLayoutInflater().inflate(setRootLayout(),container,false);
+        container.addView(rootLayout);
+    }
 
 
+    @Override
+    public View getTitleBar() {
+        return titleBar;
+    }
+
+    /**
+     * 设置容器的主布局
+     */
+    protected abstract int setRootLayout();
+
+    /**
+     *
+     * @return 返回主布局View
+     */
+    protected View getRootLayout(){
+        return rootLayout;
     }
 }

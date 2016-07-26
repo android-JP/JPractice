@@ -7,10 +7,6 @@
         android:supportsRtl="true"
         >
 
-        <activity android:name=".activities.CommonTabActivity"
-            android:theme="@style/Theme.AppCompat"
-            />
-
     </application>
 
 </manifest>

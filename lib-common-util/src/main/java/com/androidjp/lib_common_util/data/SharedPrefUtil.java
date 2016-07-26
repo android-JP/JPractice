@@ -3,6 +3,8 @@ package com.androidjp.lib_common_util.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.lang.ref.WeakReference;
+
 
 /**
  * Created by JP on 2016/3/24.
@@ -14,23 +16,20 @@ public class SharedPrefUtil {
 
 
     /**
-     * 使用前必须初始化
-     *
+     * 初始化并返回一个SPF文件对象
      * @param context
+     * @return
      */
-    public static void initSharedPreferences(Context context) {
+    public static SharedPreferences getInstance(Context context) {
         if (sharedPrefs == null) {
-            sharedPrefs = context.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
-        }
-//        setMsgList(null);/*TODO：暂时每一次进入APP，清空文件中的我的消息列表*/
-    }
-
-    public static SharedPreferences getInstance() {
-        if (sharedPrefs == null) {
-//            sharedPrefs = MyAppl.getInstance().getApplicationContext().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+            sharedPrefs = context.getApplicationContext().getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         }
         return sharedPrefs;
     }
+
+
+
+
 
 
 }

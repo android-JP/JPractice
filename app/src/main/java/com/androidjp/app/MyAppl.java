@@ -15,6 +15,8 @@ public class MyAppl extends Application {
     public void onCreate() {
         super.onCreate();
         appContext = getApplicationContext();
+
+
     }
 
     public static Context getContext(){
