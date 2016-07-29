@@ -22,10 +22,7 @@ Practice for new interesting technology
   * 包含所有需要进行aidl途径的操作
   * binder机制的运用示例
 5. lib-custom-view
-  * edittext
-    * JPwdInputView 【自定义密码输入框】
-  * titlebar
-    * ImmerseTitleBar【自定义沉浸式Titlebar】
+  * titlebar【目前有：自定义沉浸式Titlebar】
   * toolbar【Toolbar的定制】
 6. lib-four-component
   * activities【Log封装、Intent返回数据监听的封装、Menu菜单Log封装的基本Activity等】
