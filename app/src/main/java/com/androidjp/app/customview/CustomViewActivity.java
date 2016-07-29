@@ -46,7 +46,12 @@ public class CustomViewActivity extends LogActivity{
 
         inputView1.setBackgroundColor(Color.YELLOW);
 
+        JPwdInputView inputView2 = new JPwdInputView(this);
+
+
+
         container.addView(inputView1);
+        container.addView(inputView2);
 
     }
 

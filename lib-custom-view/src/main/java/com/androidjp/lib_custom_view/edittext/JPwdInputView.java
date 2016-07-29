@@ -22,13 +22,14 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.androidjp.lib_common_util.data.DisplayUtil;
+import com.androidjp.lib_custom_view.LogView;
 import com.androidjp.lib_custom_view.R;
 
 /**
  * 多用法的密码输入框（仿微信）
  * Created by androidjp on 16-7-27.
  */
-public class JPwdInputView extends View {
+public class JPwdInputView extends LogView {
     private InputMethodManager inputMethod;//输入法管理器
     private InputCallback inputCallback;///输入完成时的回调接口
 
@@ -89,9 +90,8 @@ public class JPwdInputView extends View {
      * 初始化相关参数
      */
     private void init(Activity activity , TypedArray ta) {
-        Log.d("View", "init()");
-        this.setFocusable(true);
-        this.setFocusableInTouchMode(true);
+        this.setFocusable(true);///设置可获取焦点
+        this.setFocusableInTouchMode(true);//设置可以通过点击事件获取焦点
         //初始化输入法管理器
         inputMethod = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         //初始化输入结果
@@ -133,7 +133,6 @@ public class JPwdInputView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
-        Log.d("View", "onMeasure()");
 
         //首先，给它默认的宽和高
         int w;
@@ -219,7 +218,6 @@ public class JPwdInputView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Log.d("View", "onDraw()");
 
         int width = getWidth() - 2;
         int height = getHeight() - 2;
@@ -271,6 +269,8 @@ public class JPwdInputView extends View {
 
     @Override
     public InputConnection onCreateInputConnection(EditorInfo outAttrs) {
+
+
         if (isJustNumber) {
             outAttrs.inputType = InputType.TYPE_CLASS_NUMBER;
         } else {

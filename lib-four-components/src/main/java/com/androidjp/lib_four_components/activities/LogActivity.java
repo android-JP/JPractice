@@ -132,7 +132,6 @@ public class LogActivity extends BaseActivity{
 
 
 
-
     //-------------------------------------------
     //-------------------------------------------
     public  void onLog(String logMsg){
