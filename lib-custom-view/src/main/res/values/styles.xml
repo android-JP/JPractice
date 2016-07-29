@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JPwdInputView">
+        <attr name="contentSizePersentage" format="float"/><!--内容占方格百分比-->
+        <attr name="contentColor" format="color"/>
+        <attr name="dotColor" format="color"/>
+        <attr name="borderColor" format="color"/>
+
+        <attr name="radiuSize" format="dimension"/><!--圆角尺度-->
+        <attr name="borderWidth" format="dimension"/><!--边框厚度-->
+        <attr name="contentBlod" format="boolean"/><!--文本是否加粗-->
+        <attr name="showContent" format="boolean"/><!--是否允许显示输入内容-->
+        <attr name="justNumber" format="boolean"/><!--是否只允许输入数字-->
+
+        <attr name="inputCount" format="integer"/><!--输入框数量-->
+    </declare-styleable>
+
+</resources>

@@ -13,11 +13,8 @@ import com.androidjp.app.R;
 import com.androidjp.lib_custom_view.titlebar.ImmerseTitleBar;
 import com.androidjp.lib_four_components.activities.LogFragmentActivity;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
 
 
 /**
@@ -31,16 +28,26 @@ import java.util.List;
 public class CommonTabActivity extends LogFragmentActivity {
 
 
+    /**
+     *  ViewPager的适配器
+     */
     PagerAdapter mPagerAdapter;
+    /**
+     * ViewPager对象
+     */
     ViewPager mViewPager;
+    /**
+     * Tablayout对象
+     */
     TabLayout mTabLayout;
-
-//    RecListFragment dogFragment;
-//    RecListFragment catFragment;
-
+    /**
+     * fragment集合Map对象（Title的名称为键）
+     */
     HashMap<String, RecListFragment> fragmentMap;
 
-
+    /**
+     * title 数组
+     */
     private String[] titles = {
             "我的狗", "我的猫"
     };
@@ -53,28 +60,9 @@ public class CommonTabActivity extends LogFragmentActivity {
 
     }
 
-
-    /***
-     * 专属Fragment的配置工作
-     */
-    public void setFragmentParams(String[] titles, List<Class<? extends RecListFragment>> clazzList){
-        if (titles==null || titles.length<=0 || clazzList==null || clazzList.size()!=titles.length)
-            return;
-
-        for (Class<?> clazz:clazzList){
-
-        }
-
-    }
-
     /**
-     * 专属ViewPager的配置工作
+     * 初始化控件
      */
-    private void resetView(){
-        //TODO
-    }
-
-
     private void initView() {
         ImmerseTitleBar titlebar = (ImmerseTitleBar) findViewById(R.id.titlebar);
         titlebar.setRightBtnText("跳转Activity").setRightBtnListener(() -> startActivity(new Intent(CommonTabActivity.this, Main2Activity.class)));

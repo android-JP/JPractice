@@ -100,6 +100,14 @@ public class LogFragmentActivity extends BaseFragmentActivity{
     //-------------------------------------------------------
     //Activity间跳转方法
     //-------------------------------------------------------
+
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode) {
+        super.startActivityForResult(intent, requestCode);
+        onLog("startActivityForResult()");
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

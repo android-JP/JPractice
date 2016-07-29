@@ -39,11 +39,4 @@ public class BaseFragment extends LogFragment{
     }
 
 
-    /**
-     * 另外，Fragment没有setResult()方法，所以需要引用到父Activity的setResult方法，如下：
-     * getActivity().setResult(BaseFragment.REQUEST_DETAIL , intent);
-     */
-
-
-
 }

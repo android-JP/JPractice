@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.androidjp.lib_common_util.system.KeyBoardUtil;
+
 /**
  * 封装了基本的Activity间Intent的传递
  * Created by androidjp on 16-7-4.
@@ -75,6 +77,12 @@ public class BaseActivity extends Activity{
      */
     public interface OkCallback{
         public void onResultOk();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        KeyBoardUtil.hideKeyboard(this);
     }
 
     //=---------------------------------------------------------------------------------

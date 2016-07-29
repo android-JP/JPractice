@@ -3,6 +3,8 @@ package com.androidjp.app;
 import android.app.Application;
 import android.content.Context;
 
+import com.androidjp.lib_common_util.system.KeyBoardUtil;
+
 /**
  * Created by androidjp on 16-7-21.
  */
@@ -22,4 +24,5 @@ public class MyAppl extends Application {
     public static Context getContext(){
         return appContext;
     }
+
 }

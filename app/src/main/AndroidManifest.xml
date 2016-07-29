@@ -60,6 +60,9 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity android:name=".fragment.FragActivity"/>
+
+        <activity android:name=".customview.CustomViewActivity"
+            />
     </application>
 
 </manifest>

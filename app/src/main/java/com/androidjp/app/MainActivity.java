@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.androidjp.app.actionbar.MyActionbarActivity;
+import com.androidjp.app.customview.CustomViewActivity;
 import com.androidjp.app.eventdispatch.EventDispatchActivity;
 import com.androidjp.app.fileio.FileIoActivity;
 import com.androidjp.app.fragment.FragActivity;
@@ -130,6 +131,15 @@ public class MainActivity extends ImmersionActivity implements View.OnClickListe
         btn8.setPadding(10,10,10,10);
         btn8.setOnClickListener(this);
 
+        Button btn9 = new Button(this);
+        btn9.setTag(1009);
+        btn9.setText("自定义View");
+        btn9.setLayoutParams(layoutParams);
+        btn9.setPadding(10,10,10,10);
+        btn9.setOnClickListener(this);
+
+
+
 
         mainLayout.addView(btn1);
         mainLayout.addView(btn2);
@@ -139,6 +149,11 @@ public class MainActivity extends ImmersionActivity implements View.OnClickListe
         mainLayout.addView(btn6);
         mainLayout.addView(btn7);
         mainLayout.addView(btn8);
+        mainLayout.addView(btn9);
+
+
+
+
 
     }
 
@@ -196,6 +211,10 @@ public class MainActivity extends ImmersionActivity implements View.OnClickListe
 
             case 1008:
                 startActivity(new Intent(this, FragActivity.class));
+                break;
+
+            case 1009:
+                startActivity(new Intent(this, CustomViewActivity.class));
                 break;
         }
     }
