@@ -16,7 +16,7 @@ public class ImmerseAdapter {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Window window = activity.getWindow();
             // Translucent status bar
-            window.setFlags(
+            window.setFlags(///设置status bar为透明
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }

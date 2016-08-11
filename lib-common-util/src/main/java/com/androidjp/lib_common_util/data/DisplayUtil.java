@@ -47,8 +47,6 @@ public class DisplayUtil {
     public static int sp2px(float spValue, Activity activity) {
         return (int) (spValue * getScreenMsg(activity).get(ScreenEnum.ScaledDensity) + 0.5f);
     }
-
-
     /**
      * 获取屏幕尺寸等信息
      */

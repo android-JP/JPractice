@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/lib-custom-view" />
             <option value="$PROJECT_DIR$/lib-event-link" />
             <option value="$PROJECT_DIR$/lib-four-components" />
+            <option value="$PROJECT_DIR$/lib-mvp" />
           </set>
         </option>
         <option name="myModules">
@@ -28,6 +29,7 @@
             <option value="$PROJECT_DIR$/lib-custom-view" />
             <option value="$PROJECT_DIR$/lib-event-link" />
             <option value="$PROJECT_DIR$/lib-four-components" />
+            <option value="$PROJECT_DIR$/lib-mvp" />
           </set>
         </option>
       </GradleProjectSettings>

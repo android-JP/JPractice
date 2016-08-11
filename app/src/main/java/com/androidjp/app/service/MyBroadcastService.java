@@ -16,10 +16,6 @@ public class MyBroadcastService extends LogService{
 
     BroadcastReceiver receiver;
 
-    @Override
-    public IBinder onBind(Intent intent) {
-        return super.onBind(intent);
-    }
 
     @Override
     public void onCreate() {
