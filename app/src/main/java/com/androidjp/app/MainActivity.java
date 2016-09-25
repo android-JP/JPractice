@@ -229,6 +229,12 @@ public class MainActivity extends ImmersionActivity implements View.OnClickListe
     }
 
 
+    /**
+     * 通过此方法,实现Intent隐式调用(Android 5.0之后Service只能被显示启动的问题)
+     * @param context 上下文
+     * @param implicitIntent 原来的隐式Intent
+     * @return 可用于隐式启动Service的Intent
+     */
     public static Intent createExplicitFromImplicitIntent(Context context, Intent implicitIntent) {
         // Retrieve all services that can match the given intent
         PackageManager pm = context.getPackageManager();
@@ -253,7 +259,6 @@ public class MainActivity extends ImmersionActivity implements View.OnClickListe
 
         return explicitIntent;
     }
-
 }
 
 

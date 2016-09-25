@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.androidjp.app.R;
 import com.androidjp.lib_custom_view.edittext.JPwdInputView;
 import com.androidjp.lib_four_components.activities.LogActivity;
+import com.androidjp.lib_lockpattern_view.JLockView;
 
 /**
  * 自定义View 演示界面
@@ -52,6 +53,14 @@ public class CustomViewActivity extends LogActivity{
 
         container.addView(inputView1);
         container.addView(inputView2);
+
+
+        JLockView lockView = new JLockView(this);
+        LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        lockView.setLayoutParams(params2);
+        container.addView(lockView);
+
+
 
     }
 

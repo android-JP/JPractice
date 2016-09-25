@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/lib-four-components/lib-four-components.iml" filepath="$PROJECT_DIR$/lib-four-components/lib-four-components.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-jpviewpager/lib-jpviewpager.iml" filepath="$PROJECT_DIR$/lib-jpviewpager/lib-jpviewpager.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-mvp/lib-mvp.iml" filepath="$PROJECT_DIR$/lib-mvp/lib-mvp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-network/lib-network.iml" filepath="$PROJECT_DIR$/lib-network/lib-network.iml" />
     </modules>
   </component>
 </project>

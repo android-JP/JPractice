@@ -14,6 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <com.androidjp.lib_lockpattern-view.JLockView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
             <!--<com.androidjp.lib_custom_view.edittext.JPwdInputView
                 android:layout_width="300px"
